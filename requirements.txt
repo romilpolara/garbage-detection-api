@@ -1,6 +1,6 @@
-Flask==3.0.0
-Flask-Cors==3.1.1
-ultralytics==8.3.30
+Flask
+Flask-Cors
+ultralytics
 opencv-python
 numpy
 pillow
