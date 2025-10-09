@@ -68,7 +68,6 @@ jobs:
             --resource-group YOUR_RESOURCE_GROUP
         env:
           AZURE_RESOURCE_GROUP: YOUR_RESOURCE_GROUP
-        # Replace YOUR_RESOURCE_GROUP with the actual resource group
 
       - name: Deploy to Azure Web App
         uses: azure/webapps-deploy@v3
@@ -76,4 +75,4 @@ jobs:
         with:
           app-name: 'garbage-detection-api'
           slot-name: 'Production'
-          package: .
+          package: ./ # Use current directory where artifact was extracted
