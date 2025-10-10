@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: garbage-detection-api
+    name: garbage_detection_api
     env: python
     buildCommand: ""
     startCommand: gunicorn garbage_detection_api.app:app
