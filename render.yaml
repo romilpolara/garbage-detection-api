@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: garbage-detection-api
+    env: python
+    buildCommand: ""
+    startCommand: gunicorn garbage-detection-api.app:app
+    envVars:
+      - key: TORCH_HOME
+        value: /var/cache/torch
+    plan: free
+    region: oregon
