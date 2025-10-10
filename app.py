@@ -20,7 +20,6 @@ TEMP_DIR = os.path.join(BASE_DIR, '../temp')
 WEB_DIR = os.path.join(BASE_DIR, '../web')
 os.makedirs(TEMP_DIR, exist_ok=True)
 ENABLE_WEB = os.getenv('ENABLE_WEB', 'false').lower() == 'true'
-PORT = int(os.getenv('PORT', 5000))
 WEB_ENTRY = os.getenv('WEB_ENTRY')  # optional explicit entry file name
 
 # Load trained YOLOv8 model (auto-downloads from URL and caches locally)
@@ -702,4 +701,4 @@ def get_severity(label, confidence):
 # 🚀 Run server
 # ---------------------------
 if __name__ == '__main__':
-    app.run(debug=True, host="0.0.0.0", port=PORT)
+    app.run(debug=True, host="0.0.0.0", port=5000)
