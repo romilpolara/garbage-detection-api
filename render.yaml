@@ -3,7 +3,7 @@ services:
     name: garbage-detection-api
     env: python
     buildCommand: ""
-    startCommand: gunicorn garbage-detection-api.app:app
+    startCommand: gunicorn garbage_detection_api.app:app
     envVars:
       - key: TORCH_HOME
         value: /var/cache/torch
